@@ -1,18 +1,32 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@darkfrei Sign out
+4
+2 3 credomane/FactorioMods_CredoTimeLapseMod
+ Code  Issues 3  Pull requests 0  Projects 0  Wiki  Insights
+FactorioMods_CredoTimeLapseMod/CTLM/gui/main.lua
+@mard mard Updated to 0.16
+718fcf6 on 25 Dec 2017
+138 lines (115 sloc)  6.3 KB
+    
 --[[
 The MIT License (MIT)
-
 Copyright (c) 2016 Credomane
-
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
 the Software without restriction, including without limitation the rights to
 use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
 the Software, and to permit persons to whom the Software is furnished to do so,
 subject to the following conditions:
-
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
 FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -67,7 +81,7 @@ function CTLM.gui.CTLM_settings_main_open(event)
     --[beg] Main frame -> saveFolder setting
     local saveFolder_flow = mainFrame.add({type="flow", name="saveFolder_flow", direction="horizontal"});
     saveFolder_flow.add({type="label", caption={"settings.main.savefolder_left"}});
-    local textfield = saveFolder_flow.add({type="textfield", name="saveFolder", style="number_textfield"});
+    local textfield = saveFolder_flow.add({type="textfield", name="saveFolder", style="stretchable_textfield"});
     textfield.text=global.config.saveFolder;
     textfield.style.minimal_width = 250;
     textfield.style.maximal_width = 250;
@@ -76,7 +90,7 @@ function CTLM.gui.CTLM_settings_main_open(event)
     --[beg] Main frame -> screenshotInterval setting
     local screenshotInterval_flow = mainFrame.add({type="flow", name="screenshotInterval_flow", direction="horizontal"});
     screenshotInterval_flow.add({type="label", caption={"settings.main.screenshotInterval_left"}});
-    local textfield = screenshotInterval_flow.add({type="textfield", name="screenshotInterval", style="number_textfield"});
+    local textfield = screenshotInterval_flow.add({type="textfield", name="screenshotInterval", style="short_number_textfield"});
     textfield.text=global.config.screenshotInterval;
     screenshotInterval_flow.add({type="label", caption={"settings.main.screenshotInterval_right"}});
     --[end] Main frame -> screenshotInterval setting
@@ -135,3 +149,15 @@ function CTLM.gui.CTLM_settings_main_save(event)
 
     CTLM.msgPlayer(player, "Core settings updated.");
 end
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
